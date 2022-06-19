@@ -11,7 +11,7 @@ class WDFViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .white
         layout()
     }
 
@@ -71,7 +71,7 @@ class WDFViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.clipsToBounds = true
-        stackView.backgroundColor = .systemGray5
+//        stackView.backgroundColor = .lightGray
         stackView.distribution = .fillEqually
         stackView.layer.borderColor = UIColor.lightGray.cgColor
         stackView.layer.borderWidth = 0.5
@@ -91,7 +91,7 @@ class WDFViewController: UIViewController {
     private lazy var resultButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .systemBlue
+        button.backgroundColor = .systemYellow
         button.layer.cornerRadius = 10
         button.setTitle("Find day", for: .normal)
         button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
@@ -148,7 +148,10 @@ class WDFViewController: UIViewController {
         NSLayoutConstraint.activate([
             resultButton.topAnchor.constraint(equalTo: resultLabel.bottomAnchor, constant: 50),
             resultButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            resultButton.widthAnchor.constraint(equalToConstant: 150)
+//            resultButton.widthAnchor.constraint(equalToConstant: 150)
+            resultButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            resultButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            resultButton.heightAnchor.constraint(equalToConstant: 50)
         
         ])
     }
