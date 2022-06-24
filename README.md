@@ -1,0 +1,2 @@
+# WeekdayFinder
+Example app
