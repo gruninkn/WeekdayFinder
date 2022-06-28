@@ -1,2 +1,2 @@
 # WeekdayFinder
-Pet project to use constraints
+Pet project to use DateFormatter
